@@ -1,0 +1,12 @@
+#endpoint: ""endpoint: https://us1.prisma.sh/aleksandar-trujic-e8b76b/authentication/dev
+
+
+datamodel: datamodel.prisma
+
+generate:
+  - generator: javascript-client
+    output: ../src/generated/prisma-client
+
+hooks:
+  post-deploy:
+    - prisma generate
